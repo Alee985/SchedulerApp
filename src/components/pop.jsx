@@ -12,7 +12,7 @@ const Pop = props => {
   }
     return (
     <div className="popup-box">
-      <div className="box">
+      <div className="box1">
         <span className="close-icon" onClick={props.handleClose}>x</span>
         <Form onSubmit={handleSubmit}>
               Title:   
