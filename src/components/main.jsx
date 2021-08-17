@@ -1,8 +1,6 @@
 import React,{useState} from "react";
 import { Button, Card, Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Footer from "./footer";
-import ShowTodos from "./showTodos";
 import Pop from "./pop";
 function Main(){
    
@@ -27,7 +25,7 @@ function Main(){
         
         <br/>
         
-        //Opens up the Pop Up on Button Click 
+        {/*Opens up the Pop Up on Button Click*/} 
         
         {isOpen && <Pop
          handleClose={togglePopup}
@@ -35,8 +33,7 @@ function Main(){
 				 todos={todos} 
          />}
 
-        //Here its not working....
-        
+        {/*Here its not working....*/}        
         {todos.map(todo=>(
             <>            
             <Card>
