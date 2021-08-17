@@ -7,16 +7,10 @@ import Pop from "./pop";
 function Main(){
    
     const [isOpen, setIsOpen] = useState(false);
-    const [todos,setTodos] =useState([{
-        title:'' ,
-        description :'' ,
-        imgUrl : ''
-    
-      }])
+    const [todos,setTodos] =useState([])
     const togglePopup = () => {
-      let state=isOpen
-        setIsOpen(true);
-        console.log(isOpen)
+        setIsOpen(!isOpen);
+        console.log()
       
     }
 
@@ -33,12 +27,28 @@ function Main(){
         
         <br/>
         
-        <ShowTodos todolist={todos}/>
+        //Opens up the Pop Up on Button Click 
         
         {isOpen && <Pop
          handleClose={togglePopup}
-         handleAdd={setTodos} 
+         handleAdd={setTodos}
+				 todos={todos} 
          />}
+
+        //Here its not working....
+        
+        {todos.map(todo=>(
+            <>            
+            <Card>
+                <Card.Body>
+                    {todo.title}
+                </Card.Body>
+            </Card>
+            
+            </>
+            )
+        )};
+ 
         
         </>
     );

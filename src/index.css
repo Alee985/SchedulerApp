@@ -115,14 +115,15 @@ body {
     position: relative;
     width: 70%;
     margin: 0 auto;
-    height: auto;
+    height: 35%;
     max-height: 70vh;
     margin-top: calc(100vh - 85vh - 20px);
-    background: rgba(18, 26, 34, 0.897);
+    background: rgb(129, 191, 253);
     border-radius: 4px;
     padding: 20px;
     border: 1px solid #999;
     overflow: auto;
+    color: black;
   }
    
   .close-icon {
